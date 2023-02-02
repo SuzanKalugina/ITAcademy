@@ -1,8 +1,23 @@
-﻿Console.WriteLine("Введите первое число:");
-var firstValue = Convert.ToInt32(Console.ReadLine());
+﻿
+Console.WriteLine("Введите первое число:");
+var a = Console.ReadLine();
+
+if (!int.TryParse(a, out var firstValue))
+{
+    Console.WriteLine("Вы ввели не число");
+
+    return;
+}
 
 Console.WriteLine("Введите второе число:");
-var secondValue = Convert.ToInt32(Console.ReadLine());
+var b = Console.ReadLine();
+
+if (!int.TryParse(b, out var secondValue))
+{
+    Console.WriteLine("Вы ввели не число");
+
+    return;
+}
 
 if (firstValue > secondValue)
 {
