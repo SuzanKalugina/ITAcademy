@@ -1,103 +1,170 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿//task a
+Console.WriteLine("Enter number sbyte type:");
+sbyte a = Convert.ToSByte(Console.ReadLine());
+Console.WriteLine(a);
+Console.WriteLine("Enter number short type:");
+short a2 = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine(a2);
+Console.WriteLine("Enter number int type:");
+int a3 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(a3);
+Console.WriteLine("Enter number long type:");
+long a4 = long.Parse(Console.ReadLine());
+Console.WriteLine(a4);
+Console.WriteLine("Enter number byte type:");
+byte a5 = Convert.ToByte(Console.ReadLine());
+Console.WriteLine(a5);
+Console.WriteLine("Enter number ushort type:");
+ushort a6 = Convert.ToUInt16(Console.ReadLine());
+Console.WriteLine(a6);
+Console.WriteLine("Enter number char type:");
+char a7 = Convert.ToChar(Console.ReadLine());
+Console.WriteLine(a7);
+Console.WriteLine("Enter number uint type:");
+uint a8 = Convert.ToUInt32(Console.ReadLine());
+Console.WriteLine(a8);
+Console.WriteLine("Enter number ulong type:");
+ulong a9 = Convert.ToUInt64(Console.ReadLine());
+Console.WriteLine(a9);
+Console.WriteLine("Enter number float type:");
+float a10 = Convert.ToSingle(Console.ReadLine());
+Console.WriteLine(a10);
+Console.WriteLine("Enter number double type:");
+double a11 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine(a11);
+Console.WriteLine("Enter number decimal type:");
+decimal a12 = Convert.ToDecimal(Console.ReadLine());
+Console.WriteLine(a12);
+Console.WriteLine("Enter number bool type:");
+bool a13 = Convert.ToBoolean(Console.ReadLine());
+Console.WriteLine(a13);
+Console.WriteLine("Enter number char type:");
+ushort a14 = Convert.ToUInt16(Console.ReadLine());
+Console.WriteLine(a14);
+Console.WriteLine("Enter number string type:");
+string a15 = Console.ReadLine();
+Console.WriteLine(a15);
+Console.WriteLine("Enter number object type:");
+object a16 = Console.ReadLine();
+Console.WriteLine(a16);
 
-const int minRiceCount = 60;
-const int minCheeseCount = 70;
-const int minFishCount = 100;
-const int minCucumberCount = 80;
-const int minNoriCount = 2;
-int bestTemperatureOfRice = 30;
-const string message = "not enough of product";
+//task b
+//b1
+byte b1 = 50;
+int bb1 = b1;
+Console.WriteLine(bb1);
+byte bbb1 = (byte)(bb1 + 300);
+Console.WriteLine(bbb1);
 
-Console.WriteLine("Sushi recipe:");
-Console.WriteLine($"minimum amount of rice: {minRiceCount}");
-Console.WriteLine("How much rice do you have?");
+//b2
+float b2 = 10.3f;
+double bb2 = b2;
+Console.WriteLine(bb2);
+float bbb2 = (float)bb2;
+Console.WriteLine(bbb2);
 
-int riceCount = Convert.ToInt32(Console.ReadLine());
+//b3
+uint b3 = 15000000;
+ulong bb3 = b3;
+Console.WriteLine(bb3);
+uint bbb3 = (uint)(bb3);
+Console.WriteLine(bbb3);
 
-if (riceCount < minRiceCount)
-{
-    Console.WriteLine(message);
+//b4
+ushort b4 = 50000;
+short bb4 = (short)(b4);
+Console.WriteLine(bb4);
+ushort bbb4 = (ushort)(bb4);
+Console.WriteLine(bbb4);
 
-    return;
-}
+//b5
+int b5 = 350000;
+long bb5 = b5;
+Console.WriteLine(bb5);
+int bbb5 = (int)(bb5);
+Console.WriteLine(bbb5);
 
-Console.WriteLine($"Boil {minRiceCount}g of rice");
-Console.WriteLine("Cool rice");
+//task c
+int c1 = 500;
+object cc1 = c1;
+c1 = (int)cc1;
+Console.WriteLine(c1);
 
-int temperatureOfrise = 100;
+sbyte c2 = 10;
+object cc2 = c2;
+c2 = (sbyte)cc2;
+Console.WriteLine(c2);
 
-while (temperatureOfrise > bestTemperatureOfRice)
-{
-    Console.WriteLine("wait");
+short c3 = 100;
+object cc3 = c3;
+c3 = (short)cc3;
+Console.WriteLine(c3);
 
-    temperatureOfrise -= 8;
-}
+ushort c4 = 200;
+object cc4 = c4;
+c4 = (ushort)cc4;
+Console.WriteLine(c4);
 
-Console.WriteLine($"Now the temperature of rice: {temperatureOfrise}");
-Console.WriteLine($"minimum amount of nori: {minNoriCount}");
-Console.WriteLine("How many nori do you have?");
+uint c5 = 300;
+object cc5 = c5;
+c5 = (uint)cc5;
+Console.WriteLine(c5);
 
-int noriCount = Convert.ToInt32(Console.ReadLine());
+long c6 = 400;
+object cc6 = c6;
+c6 = (short)cc6;
+Console.WriteLine(c6);
 
-if (noriCount < minNoriCount)
-{
-    Console.WriteLine(message);
+ulong c7 = 500;
+object cc7 = c7;
+c7 = (ulong)cc7;
+Console.WriteLine(c7);
 
-    return;
-}
+float c8 = 600;
+object cc8 = c8;
+c8 = (float)cc8;
+Console.WriteLine(c8);
 
-Console.WriteLine($"Take {minNoriCount} nori");
-Console.WriteLine($"Add {minRiceCount} of rice");
-Console.WriteLine($"minimum amount of fish: {minFishCount}");
-Console.WriteLine("How much fish do you have?");
+double c9 = 700;
+object cc9 = c9;
+c9 = (double)cc9;
+Console.WriteLine(c9);
 
-int fishCount = Convert.ToInt32(Console.ReadLine());
+char c10 = 'a';
+object cc10 = c10;
+c10 = (char)cc10;
+Console.WriteLine(c10);
 
-if (fishCount < minFishCount)
-{
-    Console.WriteLine(message);
+bool c11 = true;
+object cc11 = c11;
+c11 = (bool)cc11;
+Console.WriteLine(c11);
 
-    return;
-}
+decimal c12 = 123.3m;
+object cc12 = c12;
+c12 = (decimal)cc12;
+Console.WriteLine(c12);
 
-Console.WriteLine($"Cut {minFishCount} of fish");
-Console.WriteLine("Add fish to nori");
-Console.WriteLine($"minimum amount of cucumber: {minCucumberCount}");
-Console.WriteLine("How much cucumber do you have?");
+//task d
+var count = 10;
+var sum = count + 10;
+Console.WriteLine(sum);
 
-int cucumberCount = Convert.ToInt32(Console.ReadLine());
+//task e
+int? val = null;
+Console.WriteLine(val);
+int val1 = 0;
+Console.WriteLine(val1);
 
-if (cucumberCount < minCucumberCount)
-{
-    Console.WriteLine(message);
+//task f
+var e = 10;        // 10 - int, поэтому e стало int, а в int уже нельзя присвоить нецелочисленный тип,
+//e = 10.1;          // т.е. после этой строчки е подразумевается, как int, компилятор для е выбрал тип int
 
-    return;
-}
+// task g
 
-Console.WriteLine($"Cut {minCucumberCount} of cucumber");
-Console.WriteLine($"Add {minCucumberCount} cucumber");
-Console.WriteLine($"minimum amount of cheese: {minCheeseCount}");
-Console.WriteLine("How many cheese do you have?");
-
-int cheeseCount = Convert.ToInt32(Console.ReadLine());
-
-if (cheeseCount < minCheeseCount)
-{
-    Console.WriteLine(message);
-
-    return;
-}
-
-Console.WriteLine($"Add {minCheeseCount} of cheese");
-Console.WriteLine("Roll up");
-Console.WriteLine("Cut roll");
-
-int rollLenght = 21;
-int numberOfpiecesOfRolls = 1;
-
-for (int i = 2; i < rollLenght; i += 2)
-{
-    numberOfpiecesOfRolls++;
-}
-
-Console.WriteLine($"You made {numberOfpiecesOfRolls} pieces of sushi");
+// extra task
+var sm = 530;
+var m = sm / 100;
+Console.WriteLine(m);
+var balabce = sm % 100;
+Console.WriteLine(balabce);
